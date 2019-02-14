@@ -38,8 +38,7 @@ def recursive
  else
   print("number of ways:#{ways} ")
  end
- puts "if you want to continue"
- puts  "please enter yes"
+ puts "if you want to continue enter yes otherwise no"
  yes = gets.chomp()
  if (yes == "yes")
    combiNations(n,0)
