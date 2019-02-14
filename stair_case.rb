@@ -1,4 +1,4 @@
-$arr = [ ] 
+$arr = [ ]
 def fib(n)
  if n <= 1
   return n
@@ -38,8 +38,23 @@ def recursive
  else
   print("number of ways:#{ways} ")
  end
- combiNations(n,0)
- puts("__________________next element______________")
- recursive
+ puts "if you want to continue"
+ puts  "please enter yes"
+ yes = gets.chomp()
+ if (yes == "yes")
+   combiNations(n,0)
+   recursive
+ elsif (yes == "no")
+    recursive
+ else 
+     puts "please enter yes or no"
+     yes = gets.chomp() 
+     if(yes == "yes")
+      combiNations(n,0)
+      recursive
+     elsif (yes == "no")
+       recursive
+     end    
+ end
 end
 recursive
