@@ -29,16 +29,17 @@ def noWays(arr,arr_length)
       print arr[i]
     end
 end
-
-puts "enter a number"
-
-n = gets.chomp().to_i
-
-ways = countNoOfWays(n.to_i)
-
-if (n == 1 or n == 2 or n ==5)
+def recursive
+ puts "enter a number"
+ n = gets.chomp().to_i
+ ways = countNoOfWays(n.to_i)
+ if (n == 1 or n == 2 or n ==5)
    print("number of ways:#{ways+1} " )
  else
   print("number of ways:#{ways} ")
+ end
+ combiNations(n,0)
+ puts("__________________next element______________")
+ recursive
 end
-combiNations(n,0)
+recursive
