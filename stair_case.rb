@@ -40,13 +40,13 @@ end
 
 puts "enter a number"
 
-n = 5
+n = gets.chomp().to_i
 
 ab = countNoOfWays(n.to_i)
 
 if (n == 1 or n == 2 or n ==5)
-   print("numbers of ways:#{ab+1} " )
+   print("number of ways:#{ab+1} " )
  else
-  print(ab)
+  print("number of ways:#{ab} ")
 end
 function(n,0)
