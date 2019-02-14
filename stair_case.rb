@@ -10,20 +10,20 @@ def countNoOfWays (s)
   return fib(s+1)
 end
 
-def function(n,i)
+def combiNations(n,i)
    if(n == 0)
-    printArray($arr,i)
+    noWays($arr,i)
    elsif(n > 0)    
     for k in 1..n+1
      if k <=2 or k == 5	
 	$arr[i] = k
-         function(n-k,i+1)
+         combiNations(n-k,i+1)
      end
     end	
   end    
   
 end
-def printArray(arr,arr_length)
+def noWays(arr,arr_length)
     print(",")
     for i in 0...arr_length
       print arr[i]
@@ -41,4 +41,4 @@ if (n == 1 or n == 2 or n ==5)
  else
   print("number of ways:#{ways} ")
 end
-function(n,0)
+combiNations(n,0)
