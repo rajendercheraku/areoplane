@@ -11,22 +11,14 @@ def countNoOfWays (s)
 end
 
 def function(n,i)
-  
    if(n == 0)
-     
     printArray($arr,i)
-   elsif(n > 0)
-    
+   elsif(n > 0)    
     for k in 1..n+1
-    
-     if k <=2 or k == 5
-	
+     if k <=2 or k == 5	
 	$arr[i] = k
-
          function(n-k,i+1)
-	
      end
-
     end	
   end    
   
@@ -42,11 +34,11 @@ puts "enter a number"
 
 n = gets.chomp().to_i
 
-ab = countNoOfWays(n.to_i)
+ways = countNoOfWays(n.to_i)
 
 if (n == 1 or n == 2 or n ==5)
-   print("number of ways:#{ab+1} " )
+   print("number of ways:#{ways+1} " )
  else
-  print("number of ways:#{ab} ")
+  print("number of ways:#{ways} ")
 end
 function(n,0)
