@@ -31,4 +31,36 @@ input.each do |i|
 
  end 
 
-print twoDimensionalArray
+r = 0
+
+b = 0
+
+twoDimensionalArray.each do |i|
+
+    if (r == 0)
+
+       i.each do |i|
+
+	   print twoDimensionalArray[b]
+   
+       end
+
+    elsif (r == 1) 
+
+       i
+  
+    elsif (r == 2)
+
+       i
+
+    else
+
+       i	    
+
+    end	
+
+   r = r + 1    
+
+end
+
+
